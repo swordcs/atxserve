@@ -1,0 +1,101 @@
+{
+  "components": 41,
+  "concurrency": 8,
+  "name": "commit-derived transaction replay under controlled development focus",
+  "repositories": {
+    "babel": {
+      "anchor_commit": "f91754b01cb9f32b83aeaa80b74ed10b5dfccb6a",
+      "root": "../commit0/babel",
+      "transactions": 32,
+      "url": "https://github.com/python-babel/babel.git"
+    },
+    "jinja": {
+      "anchor_commit": "eb0df049deac83610f2ff09026fd39554bd4072b",
+      "root": "../commit0/jinja",
+      "transactions": 32,
+      "url": "https://github.com/pallets/jinja.git"
+    },
+    "marshmallow": {
+      "anchor_commit": "947724c7391814a740b94239807eb964c9bf40d7",
+      "root": "../commit0/marshmallow",
+      "transactions": 32,
+      "url": "https://github.com/marshmallow-code/marshmallow.git"
+    }
+  },
+  "schedules": {
+    "dispersed:seed_17": {
+      "offered_any_pair_rate": 0.22321428571428573,
+      "offered_conflicting_txn_rate": 0.7083333333333334,
+      "schedule_hash": "sha256:258e845158ed5556d4d116be42609f999c6719cf5a4f382393ddabb71ffec9f9",
+      "waves": 12
+    },
+    "dispersed:seed_27": {
+      "offered_any_pair_rate": 0.22321428571428573,
+      "offered_conflicting_txn_rate": 0.7083333333333334,
+      "schedule_hash": "sha256:e74a277ebebc5162ab28537d4d3a53cb02e9ccd37453a7f20f37d7dcaa9cf5bb",
+      "waves": 12
+    },
+    "dispersed:seed_7": {
+      "offered_any_pair_rate": 0.22321428571428573,
+      "offered_conflicting_txn_rate": 0.7083333333333334,
+      "schedule_hash": "sha256:2417d92f221280a05d15b3ee5dae0f24d0c49360b4a4828eb55436a7546836e3",
+      "waves": 12
+    },
+    "focused:seed_17": {
+      "offered_any_pair_rate": 0.4226190476190476,
+      "offered_conflicting_txn_rate": 0.875,
+      "schedule_hash": "sha256:6fb983d89aa35a5d8b00b1581f8de01a11ab1d4548aa6aa4c8c0977e937fe896",
+      "waves": 12
+    },
+    "focused:seed_27": {
+      "offered_any_pair_rate": 0.4226190476190476,
+      "offered_conflicting_txn_rate": 0.875,
+      "schedule_hash": "sha256:026c356bc1672ca9524459b90f91f8608aaa6b00bbc8e13d39bb9d2eac5ce435",
+      "waves": 12
+    },
+    "focused:seed_7": {
+      "offered_any_pair_rate": 0.4226190476190476,
+      "offered_conflicting_txn_rate": 0.875,
+      "schedule_hash": "sha256:4d05ff02ec2ca798b0ef2107a11ec86d3dd189f81f6729ce913cd4fd2e03e1ac",
+      "waves": 12
+    },
+    "mixed:seed_17": {
+      "offered_any_pair_rate": 0.2619047619047619,
+      "offered_conflicting_txn_rate": 0.75,
+      "schedule_hash": "sha256:e40eac84cbc0ab931d9215153960039c0c719b332ec02c0609084dea9e0e3cc7",
+      "waves": 12
+    },
+    "mixed:seed_27": {
+      "offered_any_pair_rate": 0.2619047619047619,
+      "offered_conflicting_txn_rate": 0.75,
+      "schedule_hash": "sha256:c08eef18375067e306b8852282d5e48a119c027c9ce2f7cdb213f4e0af30a018",
+      "waves": 12
+    },
+    "mixed:seed_7": {
+      "offered_any_pair_rate": 0.2619047619047619,
+      "offered_conflicting_txn_rate": 0.75,
+      "schedule_hash": "sha256:46422d9199495007c3168efb8c57c9af0fe627e33e4318f8e6b7695ae3b8ab22",
+      "waves": 12
+    }
+  },
+  "schema_version": 1,
+  "seeds": [
+    7,
+    17,
+    27
+  ],
+  "selection": {
+    "conflict_aware_selection": false,
+    "file_must_exist_at_anchor": true,
+    "max_changed_lines": 300,
+    "max_direct_internal_imports": 3,
+    "modified_python_files_exactly": 1,
+    "non_merge": true,
+    "selection_order": "reverse chronological from pinned anchor"
+  },
+  "transaction_hash": "sha256:cfa80386a7279a92f7fde7edde305e1fc9e91c3b9660d1d36115a5235406e305",
+  "transactions": 96,
+  "unique_commits": 96,
+  "unique_read_files": 54,
+  "unique_write_files": 41
+}

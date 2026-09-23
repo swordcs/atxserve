@@ -1,0 +1,37 @@
+[benchmark]
+name = "rmwbench-smoke"
+seed = 20260826
+
+[dataset]
+files = 4
+blocks_per_file = 16
+
+[payload]
+target_tokens = 256
+tolerance = 0.10
+anchors_per_block = 4
+
+[agents]
+count = 4
+
+[run]
+operations = 16
+scheduler = "forced_stale"
+invalid_write_policy = "reject"
+max_retries = 1
+mock_delay_ms = 0.0
+
+[reasoning]
+candidate_facts = 8
+relevant_facts = 3
+candidate_targets = 4
+
+[conflict]
+mode = "exact"
+ww_rate = 0.50
+rw_rate = 0.25
+
+[storage]
+write_validation = "observe"
+hash = "sha256"
+

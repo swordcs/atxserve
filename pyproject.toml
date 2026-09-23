@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "atxserve-rmwbench"
+version = "0.2.0"
+description = "Transaction-aware admission and versioned execution for RMWBench"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+authors = [{ name = "TxServe contributors" }]
+dependencies = []
+
+[project.scripts]
+rmwbench = "rmwbench.__main__:main"
+atxserve = "atxserve.experiments:main"
+atxserve-api = "atxserve.api:main"
+atxserve-dynamic = "atxserve.dynamic:main"
+atxserve-serve = "atxserve.serve:main"
+atxserve-data = "atxserve.datasets:main"
+atxserve-diagnostics = "atxserve.diagnostics:main"
+atxserve-stress = "atxserve.stress:main"
+atxserve-declarations = "atxserve.declarations:main"
+atxserve-export = "atxserve.export:main"
+
+[project.optional-dependencies]
+legacy-api = ["starlette>=0.37"]
+figures = ["matplotlib>=3.8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

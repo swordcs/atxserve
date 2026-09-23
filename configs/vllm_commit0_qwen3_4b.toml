@@ -1,0 +1,62 @@
+[benchmark]
+name = "rmwbench-commit0-qwen3-4b"
+seed = 7
+
+[dataset]
+files = 32
+blocks_per_file = 1
+source = "commit0"
+root = "data/commit0/babel"
+
+[payload]
+target_tokens = 960
+tolerance = 0.15
+anchors_per_block = 4
+source_token_variation = 0.0
+
+[agents]
+count = 8
+
+[run]
+operations = 64
+scheduler = "rolling"
+invalid_write_policy = "reject"
+max_retries = 3
+mock_delay_ms = 0.0
+
+[reasoning]
+candidate_facts = 4
+relevant_facts = 2
+candidate_targets = 16
+
+[conflict]
+mode = "exact"
+ww_rate = 1.0
+rw_rate = 0.50
+zipf_alpha = 1.20
+
+[prediction]
+read_precision = 1.0
+read_recall = 1.0
+write_precision = 1.0
+write_recall = 1.0
+
+[storage]
+write_validation = "basis_occ"
+hash = "sha256"
+
+[txserve]
+mode = "vllm_lock_manager"
+aging_factor = 0.01
+max_batch_size = 8
+refine_access_sets = true
+reuse_probe_snapshot = true
+
+[model]
+backend = "vllm"
+base_url = "http://127.0.0.1:18080/v1"
+name = "qwen3-4b"
+min_tokens = 128
+max_tokens = 256
+timeout_seconds = 120.0
+admission_lease_seconds = 300.0

@@ -1,0 +1,64 @@
+[benchmark]
+name = "rmwbench-dynamic-write-commit-focus-qwen3-4b"
+seed = 7
+
+[dataset]
+files = 1
+blocks_per_file = 1
+source = "commit_focus"
+root = "data/commit_focus"
+schedule = "dispersed"
+
+[payload]
+target_tokens = 448
+tolerance = 0.15
+anchors_per_block = 4
+source_token_variation = 0.0
+
+[agents]
+count = 8
+
+[run]
+operations = 96
+scheduler = "concurrent"
+invalid_write_policy = "reject"
+max_retries = 3
+mock_delay_ms = 0.0
+
+[reasoning]
+candidate_facts = 4
+relevant_facts = 2
+candidate_targets = 16
+
+[conflict]
+mode = "exact"
+ww_rate = 0.0
+rw_rate = 0.0
+zipf_alpha = 0.0
+
+[prediction]
+read_precision = 1.0
+read_recall = 1.0
+write_precision = 1.0
+write_recall = 1.0
+
+[storage]
+write_validation = "basis_occ"
+hash = "sha256"
+
+[txserve]
+mode = "vllm_lock_manager"
+aging_factor = 0.01
+max_batch_size = 8
+refine_access_sets = true
+reuse_probe_snapshot = true
+late_bind_write_target = true
+
+[model]
+backend = "vllm"
+base_url = "http://127.0.0.1:18080/v1"
+name = "qwen3-4b"
+min_tokens = 128
+max_tokens = 256
+timeout_seconds = 120.0
+admission_lease_seconds = 300.0

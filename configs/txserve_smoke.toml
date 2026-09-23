@@ -1,0 +1,44 @@
+[benchmark]
+name = "rmwbench-txserve-smoke"
+seed = 7
+
+[dataset]
+files = 4
+blocks_per_file = 16
+
+[payload]
+target_tokens = 320
+tolerance = 0.10
+anchors_per_block = 2
+
+[agents]
+count = 4
+
+[run]
+operations = 16
+scheduler = "concurrent"
+invalid_write_policy = "reject"
+max_retries = 1
+mock_delay_ms = 10.0
+
+[reasoning]
+candidate_facts = 4
+relevant_facts = 2
+candidate_targets = 4
+
+[conflict]
+mode = "exact"
+ww_rate = 0.50
+rw_rate = 0.25
+
+[storage]
+write_validation = "basis_occ"
+hash = "sha256"
+
+[txserve]
+mode = "txserve"
+aging_factor = 0.01
+max_batch_size = 2
+
+[model]
+backend = "mock"

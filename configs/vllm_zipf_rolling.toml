@@ -1,0 +1,52 @@
+[benchmark]
+name = "rmwbench-vllm-zipf-rolling"
+seed = 7
+
+[dataset]
+files = 8
+blocks_per_file = 32
+
+[payload]
+target_tokens = 320
+tolerance = 0.15
+anchors_per_block = 4
+source_token_variation = 0.60
+
+[agents]
+count = 8
+
+[run]
+operations = 256
+scheduler = "rolling"
+invalid_write_policy = "reject"
+max_retries = 3
+mock_delay_ms = 0.0
+
+[reasoning]
+candidate_facts = 4
+relevant_facts = 2
+candidate_targets = 64
+
+[conflict]
+mode = "exact"
+ww_rate = 1.0
+rw_rate = 0.50
+zipf_alpha = 1.20
+
+[storage]
+write_validation = "basis_occ"
+hash = "sha256"
+
+[txserve]
+mode = "vllm_lock_manager"
+aging_factor = 0.01
+max_batch_size = 8
+
+[model]
+backend = "vllm"
+base_url = "http://127.0.0.1:18080/v1"
+name = "qwen3-4b"
+min_tokens = 0
+max_tokens = 64
+timeout_seconds = 120.0
+admission_lease_seconds = 300.0

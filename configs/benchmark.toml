@@ -1,0 +1,37 @@
+[benchmark]
+name = "rmwbench"
+seed = 20260826
+
+[dataset]
+files = 32
+blocks_per_file = 128
+
+[payload]
+target_tokens = 4096
+tolerance = 0.10
+anchors_per_block = 16
+
+[agents]
+count = 8
+
+[run]
+operations = 10000
+scheduler = "concurrent"
+invalid_write_policy = "reject"
+max_retries = 1
+mock_delay_ms = 1.0
+
+[reasoning]
+candidate_facts = 32
+relevant_facts = 4
+candidate_targets = 16
+
+[conflict]
+mode = "exact"
+ww_rate = 0.30
+rw_rate = 0.20
+
+[storage]
+write_validation = "observe"
+hash = "sha256"
+
