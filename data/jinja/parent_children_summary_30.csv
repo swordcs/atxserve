@@ -1,0 +1,101 @@
+﻿parent_feature_id,source_task_id,original_feature_id,parent_feature_title,child_count,child_task_ids
+jinja-t1465-f01,1465,1,Add case_sensitive parameter to groupby() filter,1,jinja-mixed-t1465-f01-groupby_case
+jinja-t1465-f02,1465,2,Add reverse parameter to groupby filter for descending sort order,4,"jinja-mixed-t1465-f02-groupby_reverse
+jinja-mixed-t1465-f02-groupby_reverse_numeric
+jinja-mixed-t1465-f02-groupby_reverse_with_default
+jinja-mixed-t1465-f02-groupby_reverse_false"
+jinja-t1465-f03,1465,3,Add Custom Separator Support to Groupby Filter for Django-Style Field Lookups,2,"jinja-mixed-t1465-f03-groupby_separator
+jinja-mixed-t1465-f03-groupby_separator_with_default"
+jinja-t1465-f04,1465,4,Add max_groups parameter to groupby filter for limiting returned groups,4,"jinja-mixed-t1465-f04-groupby_max_groups
+jinja-mixed-t1465-f04-groupby_max_groups_zero
+jinja-mixed-t1465-f04-groupby_max_groups_larger_than_available
+jinja-mixed-t1465-f04-groupby_max_groups_empty_input"
+jinja-t1465-f05,1465,5,Add include_empty parameter to groupby filter for handling empty values,3,"jinja-mixed-t1465-f05-groupby_include_empty_true
+jinja-mixed-t1465-f05-groupby_include_empty_false
+jinja-mixed-t1465-f05-groupby_include_empty_with_default"
+jinja-t1465-f06,1465,6,Add key_transform parameter to groupby filter for custom group key formatting,2,"jinja-mixed-t1465-f06-groupby_key_transform
+jinja-mixed-t1465-f06-groupby_key_transform_none"
+jinja-t1465-f07,1465,7,Add stable parameter to groupby filter for preserving item order within groups,4,"jinja-mixed-t1465-f07-groupby_stable_basic
+jinja-mixed-t1465-f07-groupby_stable_empty
+jinja-mixed-t1465-f07-groupby_stable_with_default
+jinja-mixed-t1465-f07-groupby_stable_nested_attribute"
+jinja-t1465-f08,1465,8,Add with_counts parameter to groupby filter for group size metadata,3,"jinja-mixed-t1465-f08-groupby_with_counts
+jinja-mixed-t1465-f08-groupby_with_counts_empty_groups
+jinja-mixed-t1465-f08-groupby_with_counts_and_default"
+jinja-t1465-f09,1465,9,Add Multi-Level Groupby Support to Jinja2 Filters,4,"jinja-mixed-t1465-f09-groupby_multilevel_basic
+jinja-mixed-t1465-f09-groupby_multilevel_three_levels
+jinja-mixed-t1465-f09-groupby_multilevel_empty_data
+jinja-mixed-t1465-f09-groupby_multilevel_with_default"
+jinja-t1465-f10,1465,10,Add filter_groups parameter to groupby filter for conditional group inclusion,4,"jinja-mixed-t1465-f10-groupby_filter_groups_duplicates
+jinja-mixed-t1465-f10-groupby_filter_groups_unique
+jinja-mixed-t1465-f10-groupby_filter_groups_empty_result
+jinja-mixed-t1465-f10-groupby_filter_groups_with_default"
+jinja-t1559-f01,1559,1,Specify context for translation block,2,"jinja-mixed-t1559-f01-context_block
+jinja-mixed-t1559-f01-context_plural_block"
+jinja-t1559-f02,1559,2,Add translation domain support to trans tag,4,"jinja-mixed-t1559-f02-trans_domain_basic
+jinja-mixed-t1559-f02-trans_domain_with_variables
+jinja-mixed-t1559-f02-trans_domain_plural
+jinja-mixed-t1559-f02-trans_domain_with_trimmed"
+jinja-t1559-f03,1559,3,feat(i18n): Add Translation Priority Levels for Fallback Translation Support,1,jinja-mixed-t1559-f03-priority_retries_until_translation_found
+jinja-t1559-f04,1559,4,Add Translation Metadata Tracking to trans tag,4,"jinja-mixed-t1559-f04-trans_metadata_basic
+jinja-mixed-t1559-f04-trans_metadata_multiple_params
+jinja-mixed-t1559-f04-trans_metadata_empty_values
+jinja-mixed-t1559-f04-trans_metadata_special_characters"
+jinja-t1559-f05,1559,5,feat(i18n): Add translation variable validation,3,"jinja-mixed-t1559-f05-reserved_variable_names
+jinja-mixed-t1559-f05-referenced_variables_validation
+jinja-mixed-t1559-f05-validation_with_trimmed"
+jinja-t1559-f06,1559,6,feat(i18n): Add translation caching support for improved performance,3,"jinja-mixed-t1559-f06-cache_size_configuration
+jinja-mixed-t1559-f06-cache_clear_method
+jinja-mixed-t1559-f06-cache_clear_functionality"
+jinja-t1559-f07,1559,7,feat(i18n): Add fallback language chains for missing translations,4,"jinja-mixed-t1559-f07-gettext_fallback_basic
+jinja-mixed-t1559-f07-ngettext_fallback_basic
+jinja-mixed-t1559-f07-multiple_fallbacks
+jinja-mixed-t1559-f07-fallback_with_trans_tag"
+jinja-t1559-f08,1559,8,feat(i18n): Add conditional translation rendering with fallback support,4,"jinja-mixed-t1559-f08-basic_conditional_trans
+jinja-mixed-t1559-f08-conditional_trans_with_variables
+jinja-mixed-t1559-f08-conditional_trans_with_pluralization
+jinja-mixed-t1559-f08-conditional_trans_complex_conditions"
+jinja-t1559-f09,1559,9,feat(ext): Add Translation Extraction Markers,4,"jinja-mixed-t1559-f09-basic_extraction_marker
+jinja-mixed-t1559-f09-multiple_marker_attributes
+jinja-mixed-t1559-f09-nested_content
+jinja-mixed-t1559-f09-multiple_extraction_blocks"
+jinja-t1559-f10,1559,10,feat(i18n): Add translation version control for managing translation updates,4,"jinja-mixed-t1559-f10-set_and_get_translation_version
+jinja-mixed-t1559-f10-get_nonexistent_translation_version
+jinja-mixed-t1559-f10-compare_translation_versions_same
+jinja-mixed-t1559-f10-compare_translation_versions_different"
+jinja-t1621-f01,1621,1,Add search path fallback mechanism for template loading,4,"jinja-mixed-t1621-f01-filesystem_loader_fallback_basic
+jinja-mixed-t1621-f01-filesystem_loader_fallback_priority
+jinja-mixed-t1621-f01-filesystem_loader_fallback_multiple_paths
+jinja-mixed-t1621-f01-filesystem_loader_fallback_not_found"
+jinja-t1621-f02,1621,2,Add Template Path Normalization,1,jinja-mixed-t1621-f02-path_normalization_preserves_security
+jinja-t1621-f03,1621,3,Add Template Path Validation,4,"jinja-mixed-t1621-f03-template_path_validation_happy_path
+jinja-mixed-t1621-f03-template_path_validation_empty_path
+jinja-mixed-t1621-f03-template_path_validation_null_bytes
+jinja-mixed-t1621-f03-template_path_validation_absolute_paths"
+jinja-t1621-f04,1621,4,feat(FileSystemLoader): Add search path priority configuration,4,"jinja-mixed-t1621-f04-priority_basic_functionality
+jinja-mixed-t1621-f04-priority_mixed_paths
+jinja-mixed-t1621-f04-priority_same_priority_preserves_order
+jinja-mixed-t1621-f04-priority_negative_values"
+jinja-t1621-f05,1621,5,Add template path caching to improve loader performance,3,"jinja-mixed-t1621-f05-filesystem_loader_records_resolved_path
+jinja-mixed-t1621-f05-filesystem_loader_records_miss_as_none
+jinja-mixed-t1621-f05-filesystem_loader_drops_cached_path_when_file_vanishes"
+jinja-t1621-f06,1621,6,Add Template Path Transformation Support,4,"jinja-mixed-t1621-f06-filesystem_loader_path_transform
+jinja-mixed-t1621-f06-dict_loader_path_transform
+jinja-mixed-t1621-f06-function_loader_path_transform
+jinja-mixed-t1621-f06-path_transform_with_invalid_input"
+jinja-t1621-f07,1621,7,Add search path expansion for environment variables and user home directory shortcuts,4,"jinja-mixed-t1621-f07-environment_variable_expansion
+jinja-mixed-t1621-f07-environment_variable_with_braces
+jinja-mixed-t1621-f07-user_home_directory_expansion
+jinja-mixed-t1621-f07-combined_expansion"
+jinja-t1621-f08,1621,8,feat(loaders): Add template path filtering capabilities to exclude templates from listing operations,4,"jinja-mixed-t1621-f08-filesystem_loader_glob_filter
+jinja-mixed-t1621-f08-filesystem_loader_regex_filter
+jinja-mixed-t1621-f08-filesystem_loader_callable_filter
+jinja-mixed-t1621-f08-dict_loader_filter"
+jinja-t1621-f09,1621,9,Add Search Path Monitoring for Automatic Template Cache Invalidation,4,"jinja-mixed-t1621-f09-auto_reload_enabled_by_default
+jinja-mixed-t1621-f09-auto_reload_can_be_disabled
+jinja-mixed-t1621-f09-cache_invalidation_on_file_change
+jinja-mixed-t1621-f09-cache_invalidation_on_file_deletion"
+jinja-t1621-f10,1621,10,Add Template Path Aliasing Support,4,"jinja-mixed-t1621-f10-dict_loader_alias_basic
+jinja-mixed-t1621-f10-dict_loader_alias_nonexistent_target
+jinja-mixed-t1621-f10-dict_loader_remove_alias
+jinja-mixed-t1621-f10-dict_loader_multiple_aliases"
